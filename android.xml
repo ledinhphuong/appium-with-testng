@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Run tests on Android devices in parallel" parallel="tests" thread-count="2">
+    <test name="Test on S8+">
+        <parameter name="appiumUrl" value="http://localhost:4723/wd/hub"/>
+        <parameter name="deviceName" value="S8+" />
+        <classes>
+            <class name="io.phuongle.tests.AndroidChrome"/>
+        </classes>
+    </test>
+
+    <test name="Test on S7">
+        <parameter name="appiumUrl" value="http://localhost:4723/wd/hub"/>
+        <parameter name="deviceName" value="S7" />
+        <classes>
+            <class name="io.phuongle.tests.AndroidChrome"/>
+        </classes>
+    </test>
+</suite>
